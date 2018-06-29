@@ -13,6 +13,8 @@ public class SpawnController : MonoBehaviour {
     public float TimeToSpawn;
     private float m_Timer;
 
+    private bool m_CanSpawn;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -21,21 +23,23 @@ public class SpawnController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        // If timer is depleted...
-        if (m_Timer <= 0)
+        if (m_CanSpawn)
         {
-            // We reset the timer
-            m_Timer = TimeToSpawn;
-            // And spawn an object!
-            SpawnObject(Origin, ObjectToSpawn, RadiusOfSpawn);
-        }
-        // If it is not...
-        else
-        {
-            // Run timer down
-            m_Timer -= Time.deltaTime;
+            // If timer is depleted...
+            if (m_Timer <= 0)
+            {
+                // We reset the timer
+                m_Timer = TimeToSpawn;
+                // And spawn an object!
+                SpawnObject(Origin, ObjectToSpawn, RadiusOfSpawn);
+            }
+            // If it is not...
+            else
+            {
+                // Run timer down
+                m_Timer -= Time.deltaTime;
+            }
         }        
-        
 	}
 
     /// <summary>
@@ -52,4 +56,13 @@ public class SpawnController : MonoBehaviour {
         // We spawn the object in that new random position
         Instantiate(ObjectToSpawn, positionToSpawn, Quaternion.identity);
     }
+
+    /// <summary>
+    /// Starts spawning depending on the value
+    /// </summary>
+    public void StartSpawning(bool value)
+    {
+        m_CanSpawn = value;
+    }
+
 }

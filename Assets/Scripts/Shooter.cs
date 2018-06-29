@@ -5,18 +5,19 @@ using UnityEngine;
 public class Shooter : MonoBehaviour {
 
     public GameObject Bullet;
-	public Transform Gun;
+	public GameObject Gun;
 	public float BulletForce;
 
 	void Start()
 	{
 //		FireBullet();
+		Gun.transform.parent = Camera.main.gameObject.transform;
+		Gun.transform.rotation = new Quaternion(0,0,0,0);
 	}
 	
 	void FireBullet()
 	{
-		Gun = Camera.main.transform;
-		GameObject newBullet = Instantiate(Bullet, Gun.position + Gun.transform.forward, Gun.rotation);
+		GameObject newBullet = Instantiate(Bullet, Gun.transform.position + Gun.transform.forward, Gun.transform.rotation);
 		newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * BulletForce, ForceMode.Impulse);
 	}
 	

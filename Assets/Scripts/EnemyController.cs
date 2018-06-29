@@ -16,4 +16,16 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    // Called when entering a collision
+    private void OnCollisionEnter(Collision collision)
+    {
+        // If the object we collide is the player...
+        if (collision.gameObject.GetComponent<PlayerController>())
+        {
+            // We destroy this object
+            Destroy(this.gameObject);
+        }
+    }
+
 }

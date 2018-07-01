@@ -5,7 +5,9 @@ using UnityEngine;
 /// <summary>
 /// Handles gameplay logic
 /// </summary>
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
+
 
     /// <summary>
     /// Flag that let us know if the game has started
@@ -24,7 +26,13 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (!GameStarted)
+		{
+			if (Input.anyKeyDown)
+			{
+				RestartGame();
+			}
+		}
 	}
 
     /// <summary>
@@ -47,12 +55,19 @@ public class GameManager : MonoBehaviour {
     /// <summary>
     /// Ends the Game
     /// </summary>
-    private void EndGame()
+    public void EndGame()
     {
         // We end game 
         GameStarted = false;
         // Stop spawning
         Spawner.StartSpawning(false);
         // Quit application?
+	    
+	    FindObjectOfType<UIManager>().EndGame();
     }
+
+	public void RestartGame()
+	{
+		Application.LoadLevel(0);
+	}
 }

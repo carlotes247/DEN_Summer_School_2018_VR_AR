@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class EnemyHitController_Example : MonoBehaviour
 {
-	public int ScoreValue = 100;
+    /// <summary>
+    /// How many points the player gets when the enemy is killed
+    /// </summary>
+    public int ScoreValue = 100;
+    /// <summary>
+    /// Damage that the enemy inflicts to the player
+    /// </summary>
 	public int Damage = 10;
-	
+    /// <summary>
+    /// Reference to the UI Manager
+    /// </summary>
+    private UIManager_Example m_UIManager;
 	
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        m_UIManager = FindObjectOfType<UIManager_Example>();        
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,16 +30,18 @@ public class EnemyHitController_Example : MonoBehaviour
 
 	public void Hit()
 	{
-		FindObjectOfType<UIManager_Example>().AddScore(ScoreValue);
-			// We destroy this object
-			Destroy(this.gameObject);
+        if (m_UIManager != null)
+        {
+            m_UIManager.AddScore(ScoreValue);
+        }
+		// We destroy this object
+		Destroy(this.gameObject);
 
 	}
 
 	// Called when entering a collision
 	void OnCollisionEnter(Collision collision)
 	{
-//		print("test");
 		if (collision.gameObject.GetComponent<BulletController_Example>() == true)
 		{
 			Destroy(collision.gameObject);

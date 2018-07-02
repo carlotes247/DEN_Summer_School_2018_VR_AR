@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Handles spawning logic
 /// </summary>
-public class SpawnController : MonoBehaviour {
+public class SpawnController_Example : MonoBehaviour {
 
     public GameObject Origin;
     public GameObject ObjectToSpawn;

@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Handles collisions
 /// </summary>
-public class CollisionChecker : MonoBehaviour {
+public class CollisionChecker_Example : MonoBehaviour {
 
     /// <summary>
     /// The tag that we will compare our collision against

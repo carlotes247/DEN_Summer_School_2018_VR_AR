@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Handles player logic
 /// </summary>
-public class PlayerController : MonoBehaviour
+public class PlayerController_Example : MonoBehaviour
 {
 
 	public int PlayerHealth = 10;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
 		PlayerHealth -= damage;
 		if (PlayerHealth <= 0)
 		{
-			FindObjectOfType<GameManager>().EndGame();
+			FindObjectOfType<GameManager_Example>().EndGame();
 		}
 	}
 

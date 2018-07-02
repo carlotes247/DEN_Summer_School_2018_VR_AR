@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Handles gameplay logic
 /// </summary>
-public class GameManager : MonoBehaviour
+public class GameManager_Example : MonoBehaviour
 {
 
 
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     /// <summary>
     /// The object that is in charge of spawning
     /// </summary>
-    public SpawnController Spawner;
+    public SpawnController_Example Spawner;
 
 	// Use this for initialization
 	void Start () {
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (Spawner == null)
         {
             // We search for it in the scene
-            Spawner = FindObjectOfType<SpawnController>();
+            Spawner = FindObjectOfType<SpawnController_Example>();
         }
         // Start spawning enemies
         Spawner.StartSpawning(true);
@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         Spawner.StartSpawning(false);
         // Quit application?
 	    
-	    FindObjectOfType<UIManager>().EndGame();
+	    FindObjectOfType<UIManager_Example>().EndGame();
     }
 
 	public void RestartGame()

@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Handles enemy logic
 /// </summary>
-public class EnemyController : MonoBehaviour
+public class EnemyController_Example : MonoBehaviour
 {
 	public float MoveSpeed = 1f;
 	
@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour
 
 	private void FindPlayer()
 	{
-		_thePlayer = FindObjectOfType<PlayerController>().gameObject;
+		_thePlayer = FindObjectOfType<PlayerController_Example>().gameObject;
 	}
 
 	private void FacePlayer()

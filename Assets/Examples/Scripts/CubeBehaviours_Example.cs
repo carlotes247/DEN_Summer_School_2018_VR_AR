@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CubeBehaviours_Example : MonoBehaviour
-{
-	[Range(0.3f, -0.3f)]
-	public float Speed;
+{	
+	public float Speed = 0.3f;
 	private float _direction = 1;
 
 	void RotateCube()

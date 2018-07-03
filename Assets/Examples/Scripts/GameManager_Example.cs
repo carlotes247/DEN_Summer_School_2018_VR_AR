@@ -33,7 +33,7 @@ public class GameManager_Example : MonoBehaviour
 		if (!GameStarted)
 		{
 			// If there is any input..
-			if (Input.anyKeyDown)
+			if (Input.GetKeyDown(KeyCode.Escape))
 			{
 				// Restart the game
 				RestartGame();

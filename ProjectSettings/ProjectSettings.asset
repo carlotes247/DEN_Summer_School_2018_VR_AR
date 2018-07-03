@@ -7,7 +7,7 @@ PlayerSettings:
   productGUID: 836e1c2dc79eb4667a68b4e094fd2448
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
-  defaultScreenOrientation: 3
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
@@ -179,7 +179,7 @@ PlayerSettings:
     serializedVersion: 2
     m_Bits: 4294901998
   iPhoneSdkVersion: 988
-  iOSTargetOSVersionString: 8.0
+  iOSTargetOSVersionString: 9.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
   tvOSTargetOSVersionString: 9.0
@@ -241,12 +241,12 @@ PlayerSettings:
   tvOSManualSigningProvisioningProfileID: 
   appleEnableAutomaticSigning: 0
   clonedFromGUID: 56e7a2d3a00f33d44bdd161b773c35b5
-  AndroidTargetDevice: 0
+  AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  AndroidTVCompatibility: 1
+  AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
   androidEnableBanner: 1
@@ -294,10 +294,16 @@ PlayerSettings:
     - Oculus
     - OpenVR
   - m_BuildTarget: Android
-    m_Enabled: 1
+    m_Enabled: 0
     m_Devices:
     - cardboard
-  m_BuildTargetEnableVuforiaSettings: []
+  m_BuildTargetEnableVuforiaSettings:
+  - m_BuildTarget: Android
+    m_Enabled: 1
+  - m_BuildTarget: iOS
+    m_Enabled: 1
+  - m_BuildTarget: Metro
+    m_Enabled: 1
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   m_TemplateCustomTags: {}
@@ -329,7 +335,7 @@ PlayerSettings:
   enableInternalProfiler: 0
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
-  cameraUsageDescription: 
+  cameraUsageDescription: Camera access required for target detection and tracking
   locationUsageDescription: 
   microphoneUsageDescription: 
   switchNetLibKey: 
@@ -588,10 +594,10 @@ PlayerSettings:
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
     1: UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT
-    4: UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT
-    7: UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT
+    4: UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT;VUFORIA_IOS_SETTINGS
+    7: UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT;MOBILE_INPUT;VUFORIA_ANDROID_SETTINGS;VUFORIA_SAMPLE_ORIENTATION_SETTINGS
     13: UNITY_POST_PROCESSING_STACK_V2
-    14: MOBILE_INPUT
+    14: MOBILE_INPUT;VUFORIA_WSA_SETTINGS
     17: UNITY_POST_PROCESSING_STACK_V2;MOBILE_INPUT
     18: UNITY_POST_PROCESSING_STACK_V2
     19: UNITY_POST_PROCESSING_STACK_V2
@@ -602,7 +608,8 @@ PlayerSettings:
     26: UNITY_POST_PROCESSING_STACK_V2
     27: UNITY_POST_PROCESSING_STACK_V2
   platformArchitecture: {}
-  scriptingBackend: {}
+  scriptingBackend:
+    Metro: 2
   incrementalIl2cppBuild: {}
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 0
@@ -630,7 +637,11 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0.12941177, g: 0.17254902, b: 0.21568628,
     a: 1}
   metroSplashScreenUseBackgroundColor: 0
-  platformCapabilities: {}
+  platformCapabilities:
+    WindowsStoreApps:
+      InternetClient: True
+      Microphone: True
+      WebCam: True
   metroFTAName: 
   metroFTAFileTypes: []
   metroProtocolName: 

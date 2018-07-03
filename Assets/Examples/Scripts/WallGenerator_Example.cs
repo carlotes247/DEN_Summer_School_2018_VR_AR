@@ -21,6 +21,9 @@ public class WallGenerator_Example : MonoBehaviour
 	/// </summary>
 	public int Height = 5;
 
+    /** this is a comment **/
+    public int Force = 100;
+
 	/// <summary>
 	/// Function to generate the wall
 	/// </summary>

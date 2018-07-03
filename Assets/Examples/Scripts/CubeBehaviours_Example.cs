@@ -39,7 +39,7 @@ public class CubeBehaviours_Example : MonoBehaviour
 	/// </summary>
 	void Update () {
 		// Call function to move the cube
-		MoveCube();
+		//MoveCube();
 		// Call function to rotate the cube
 		RotateCube();
 	}

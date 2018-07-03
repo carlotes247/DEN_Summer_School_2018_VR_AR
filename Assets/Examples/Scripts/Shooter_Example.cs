@@ -37,7 +37,7 @@ public class Shooter_Example : MonoBehaviour {
 	void FireBullet()
 	{
 		// Create the new bullet object
-		GameObject newBullet = Instantiate(Bullet, Gun.transform.position + Gun.transform.forward, Gun.transform.rotation);
+		GameObject newBullet = Instantiate(Bullet, Gun.transform.position , Gun.transform.rotation);
 		// Add a force to the bullet object so that it will be projected away from the gun
 		newBullet.GetComponent<Rigidbody>().AddForce(newBullet.transform.forward * BulletForce, ForceMode.Impulse);
 	}

@@ -15,5 +15,5 @@ EditorBuildSettings:
     path: Assets/Examples/Scenes/AR/2-Loading_Example.unity
     guid: 4b0a1ec72e632ae4d9d9d1957cd8b504
   - enabled: 1
-    path: Assets/Examples/Scenes/AR/3-ImageTargets_Example.unity
+    path: Assets/Examples/Scenes/AR/3-ImageTargets.unity
     guid: fafbebefa96588741b2f98d9cf59db70

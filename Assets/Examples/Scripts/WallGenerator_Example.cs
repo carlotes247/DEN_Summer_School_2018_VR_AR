@@ -35,7 +35,7 @@ public class WallGenerator_Example : MonoBehaviour
 			for (int y = 0; y < Height; y++)
 			{
 				// Create a new block at this current, offset by the width, height, and centering offset
-				GameObject newBlock = Instantiate(CubePrefab, centeringOffset + transform.position + (transform.right * x) + (transform.up * y), transform.rotation);
+				GameObject newBlock = Instantiate(CubePrefab, centeringOffset + transform.position + (transform.right * x * CubePrefab.transform.localScale.x) + (transform.up * y * CubePrefab.transform.localScale.y), transform.rotation);
 				// Make the new block a child of this object to neaten the project heirarchy
 				newBlock.transform.parent = this.transform;
 			}
@@ -46,14 +46,21 @@ public class WallGenerator_Example : MonoBehaviour
 	/// Use this for initialization
 	/// </summary>
 	void Start () {
-		// Call function to generate the wall
-		GenerateWall();
-	}
-	
-	/// <summary>
-	/// Update is called once per frame
-	/// </summary>
-	void Update () {
+        // Call function to generate the wall
+        GenerateWall();
+
+    }
+
+    private void OnEnable()
+    {
+        // Call function to generate the wall
+        //GenerateWall();
+    }
+
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
+    void Update () {
 		
 	}
 	

@@ -2,6 +2,9 @@
     using System.Collections;
     using System.Collections.Generic;
 
+/// <summary>
+/// Mouse Look script from here: http://wiki.unity3d.com/index.php/SmoothMouseLook
+/// </summary>
 [AddComponentMenu("Camera-Control/Smooth Mouse Look")]
 public class SmoothMouseLook : MonoBehaviour
 {

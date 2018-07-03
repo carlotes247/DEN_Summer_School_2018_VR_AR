@@ -7,8 +7,6 @@ using UnityEngine;
 /// </summary>
 public class GameManager_Example : MonoBehaviour
 {
-
-
     /// <summary>
     /// Flag that let us know if the game has started
     /// </summary>
@@ -19,17 +17,25 @@ public class GameManager_Example : MonoBehaviour
     /// </summary>
     public SpawnController_Example Spawner;
 
-	// Use this for initialization
+	/// <summary>
+	/// Use this for initialization
+	/// </summary>
 	void Start () {
+		// Call the function to start the game
         StartGame();
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+	/// Update is called once per frame
+	/// </summary>
 	void Update () {
+		// If the game has not started yet (or if the game has ended and needs to be restarted)
 		if (!GameStarted)
 		{
+			// If there is any input..
 			if (Input.anyKeyDown)
 			{
+				// Restart the game
 				RestartGame();
 			}
 		}
@@ -66,8 +72,12 @@ public class GameManager_Example : MonoBehaviour
 	    FindObjectOfType<UIManager_Example>().EndGame();
     }
 
+	/// <summary>
+	/// Function to restart the game
+	/// </summary>
 	public void RestartGame()
 	{
+		// Reload the level
 		Application.LoadLevel(0);
 	}
 }

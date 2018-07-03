@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+/// <summary>
+/// Manages the game's UI
+/// </summary>
 public class UIManager_Example : MonoBehaviour {
 
     /// <summary>
@@ -44,6 +47,7 @@ public class UIManager_Example : MonoBehaviour {
     /// </summary>
 	public void EndGame()
 	{
+		// Activate the game over text
 		GameOverText.SetActive(true);
 	}
 
@@ -55,10 +59,12 @@ public class UIManager_Example : MonoBehaviour {
         // If we have the references to our objects...
         if (ScoreText != null)
         {
+	        // Update the score text
             ScoreText.text = "Score: " + _gameScore;
         }
         if (m_Player != null)
         {
+	        // Update the health text
             HealthText.text = "Health: " + FindObjectOfType<PlayerController_Example>().PlayerHealth;
         }
     }
@@ -69,7 +75,9 @@ public class UIManager_Example : MonoBehaviour {
     /// <param name="_newScore"></param>
 	public void AddScore(int _newScore)
 	{
+		// Add an amount to the game's score
 		_gameScore += _newScore;
+		// Update the UI to reflect the new score
 		UpdateUI();
 	}
 }

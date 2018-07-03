@@ -7,22 +7,43 @@ using UnityEngine;
 /// </summary>
 public class SpawnController_Example : MonoBehaviour {
 
+    /// <summary>
+    /// Reference to the object around which the enemies will spawn
+    /// </summary>
     public GameObject Origin;
+    /// <summary>
+    /// Reference to the Enemy prefab to be spawned
+    /// </summary>
     public GameObject ObjectToSpawn;
+    /// <summary>
+    /// Public variable to set how wide a radius to spawn within
+    /// </summary>
     public float RadiusOfSpawn;
+    /// <summary>
+    /// Public variable to set the time interval between spawning
+    /// </summary>
     public float TimeToSpawn;
+    /// <summary>
+    /// Private variable to hold the count down timer 
+    /// </summary>
     private float m_Timer;
-
+    /// <summary>
+    /// Private boolean to define whether a new enemy can spawn yet
+    /// </summary>
     private bool m_CanSpawn;
 
-	// Use this for initialization
+	/// <summary>
+	/// Use this for initialization
+	/// </summary>
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
+	/// <summary>
+	/// Update is called once per frame
+	/// </summary>
 	void Update () {
-
+        // If the spawner is ready to spawn
         if (m_CanSpawn)
         {
             // If timer is depleted...
@@ -62,6 +83,7 @@ public class SpawnController_Example : MonoBehaviour {
     /// </summary>
     public void StartSpawning(bool value)
     {
+	    // Set the spawner as "ready to spawn"
         m_CanSpawn = value;
     }
 

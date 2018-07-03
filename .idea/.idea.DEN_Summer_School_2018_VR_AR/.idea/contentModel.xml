@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_DEN_Summer_School_2018_VR_AR.-192695841.00" t="ExcludeRecursive" />
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/Examples" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="BulletController_Example.cs" t="Include" />
+          <e p="CollisionChecker_Example.cs" t="Include" />
+          <e p="CubeBehaviours_Example.cs" t="Include" />
+          <e p="EnemyController_Example.cs" t="Include" />
+          <e p="EnemyHitController_Example.cs" t="Include" />
+          <e p="GameManager_Example.cs" t="Include" />
+          <e p="PlayerController_Example.cs" t="Include" />
+          <e p="Shooter_Example.cs" t="Include" />
+          <e p="SmoothMouseLook.cs" t="Include" />
+          <e p="SpawnController_Example.cs" t="Include" />
+          <e p="UIManager_Example.cs" t="Include" />
+          <e p="WallGenerator_Example.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DEN_Summer_School_2018_VR_AR.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

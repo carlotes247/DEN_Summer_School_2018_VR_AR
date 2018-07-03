@@ -16,6 +16,7 @@ public class SamplesMainMenu : MonoBehaviour
     public enum MenuItem
     {
         ImageTargets,
+        ImageTargets_Example,
         VuMark,
         CylinderTargets,
         MultiTargets,
@@ -34,8 +35,8 @@ public class SamplesMainMenu : MonoBehaviour
     // initialize static enum with one of the items
     public static MenuItem menuItem = MenuItem.ImageTargets;
 
-    public const string MenuScene = "1-Menu";
-    public const string LoadingScene = "2-Loading";
+    public const string MenuScene = "1-Menu_Example";
+    public const string LoadingScene = "2-Loading_Example";
 
     SamplesAboutScreenInfo aboutScreenInfo;
 
@@ -87,6 +88,9 @@ public class SamplesMainMenu : MonoBehaviour
 
             case ("ImageTargets"):
                 menuItem = MenuItem.ImageTargets;
+                break;
+            case ("ImageTargets_Example"):
+                menuItem = MenuItem.ImageTargets_Example;
                 break;
             case ("VuMark"):
                 menuItem = MenuItem.VuMark;

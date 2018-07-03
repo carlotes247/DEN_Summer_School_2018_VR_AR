@@ -491,7 +491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1130749842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -506,7 +506,6 @@ MonoBehaviour:
   CubePrefab: {fileID: 1364450825148102, guid: 825e1486cb8e942ffa76ce1d5a3b9b42, type: 2}
   Width: 10
   Height: 10
-  Blocks: []
 --- !u!4 &1130749843
 Transform:
   m_ObjectHideFlags: 0
